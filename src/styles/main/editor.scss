@@ -1,0 +1,9 @@
+.height-45dvh{
+  height: 50vh;
+}
+
+@supports (height: 45dvh) {
+  .height-45dvh{
+    height: 45dvh;
+  }
+}

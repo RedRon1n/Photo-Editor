@@ -1,0 +1,183 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Deepnude - Editor Result" %}
+
+{% block page %}
+    <main class="lg:p-[1.9354vh] lg:pb-0 lg:!leading-[2.32vh] p-4 bg-editor bg-cover bg-center bg-no-repeat bg-fixed">
+        <section id="editor" class="flex gap-x-[1.9354vh] lg:flex-row flex-col">
+            <div class="flex flex-col lg:gap-y-[1.7204vh] gap-y-2 lg:min-w-[36.771vh]">
+                <header class="lg:p-[1.7204vh] py-3 px-4 rounded-xl bg-zeus lg:block flex items-center gap-x-3">
+                    <a href="/">
+                        <img src="/src/assets/images/logo.svg" alt=""
+                             class="lg:h-[2.0430vh] h-[1.1875rem] lg:w-auto w-7 lg:object-fill lg:object-center object-cover object-[0.11rem_0.05rem]">
+                    </a>
+                    <div class="flex lg:flex-row items-center justify-between lg:p-[0.5913vh] lg:pl-[0.4301vh] lg:mt-[2.5806vh] lg:mb-[0.8602vh] lg:rounded-lg lg:bg-white lg:bg-opacity-5 order-1 flex-row-reverse gap-x-2.5">
+                        <a href="/account" class="flex items-center gap-x-[0.9677vh]">
+                            <img src="/src/assets/images/hero-image-0.png" alt=""
+                                 class="lg:w-[3.1182vh] lg:h-[3.1182vh] object-cover rounded-full lg:border-[0.2150vh] border-white border-opacity-20 w-9 h-9 border-2">
+                            <span class="text-[1.5053vh] lg:block hidden">Ivan Ivanov</span>
+                        </a>
+                        <a href="#"
+                           class="flex items-center lg:gap-x-[1.1827vh] lg:py-[0.6451vh] lg:px-[1.2903vh] rounded bg-gradient-to-br from-purple-heart to-electric-violet gap-x-2 py-1.5 px-3">
+                            <img src="/src/assets/images/crown.svg" alt="" class="lg:h-[1.7204vh] h-4">
+                            <span class="text-[1.3440vh] lg:block hidden">Choose Plan</span>
+                            <span class="text-[0.75rem] lg:hidden">Plan</span>
+                        </a>
+                    </div>
+                    <a href="#"
+                       class="flex justify-center items-center lg:gap-x-[1.0752vh] lg:py-[0.8602vh] lg:px-0 lg:ml-0 rounded bg-white bg-opacity-5 gap-x-2 py-1.5 px-5 ml-auto  hover:bg-scorpion">
+                        <img src="/src/assets/images/dollar.svg" alt="" class="lg:h-[2.1505vh] h-6">
+                        <span class="text-[1.5053vh] text-white text-opacity-50 lg:block hidden">Referral Dashboard</span>
+                        <span class="text-[0.875rem] text-white text-opacity-50 lg:hidden">Referral</span>
+                    </a>
+                </header>
+                <div class="lg:hidden flex justify-center items-center rounded-xl bg-oil overflow-hidden">
+                    <div class="relative">
+                        <img src="/src/assets/images/editor-result.png" alt="" class="min-w-full min-h-full">
+                    </div>
+                </div>
+                <div id="swiper-editor-banners" class="swiper lg:w-[36.771vh] lg:block w-full hidden">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide relative flex flex-col lg:h-[47.2043vh] lg:py-[1.7204vh] lg:px-[1.2903vh] h-[26.4337rem] py-4 px-3 rounded-xl bg-zeus overflow-hidden">
+                            <img src="/src/assets/images/editor-banner-wait.png" alt="" class="absolute z-0 max-w-none lg:w-[34.0860vh] lg:top-[-4.8387vh] lg:right-[-3.6559vh] w-80 -top-11 -right-8">
+                            <span class="mt-auto lg:mb-[0.8602vh] lg:text-[1.2903vh] mb-4 text-xs block uppercase font-semibold text-flush-orange">please wait</span>
+                            <span class="lg:text-[2.5806vh] text-xl font-semibold">Your image is processing</span>
+                            <p class="lg:mt-[1.7204vh] lg:mb-[2.5806vh] lg:text-[1.5053vh] mt-4 mb-6 text-sm text-white text-opacity-50">
+                                We're generating your image, please just waiting. To<br>
+                                open generation without waiting, upgrade your<br>
+                                plan!
+                            </p>
+                            <span class="lg:text-[1.2903vh] text-xs text-white text-opacity-50">Your current plan</span>
+                            <div class="lg:mt-[0.8602vh] lg:p-[0.8602vh] mt-2 p-2 flex justify-between items-center rounded bg-white bg-opacity-[2%]">
+                                <span class="lg:text-[1.5053vh] text-sm text-white text-opacity-50">No plan</span>
+                                <a href="#" class="flex items-center lg:gap-x-[1.1827vh] lg:py-[0.6451vh] lg:px-[1.2903vh] rounded bg-gradient-to-br from-purple-heart to-electric-violet gap-x-2 py-1.5 px-3">
+                                    <img src="/src/assets/images/crown.svg" alt="" class="lg:h-[1.7204vh] h-4">
+                                    <span class="text-[1.3440vh] text-xs">Choose Plan</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide relative flex flex-col lg:h-[47.2043vh] lg:py-[1.7204vh] lg:px-[1.2903vh] h-[26.4337rem] py-4 px-3 rounded-xl bg-zeus overflow-hidden">
+                            <img src="/src/assets/images/editor-banner-referral.png" alt="" class="absolute z-0 max-w-none lg:w-[48.2795vh] lg:top-[-16.1290vh] lg:right-[-18.2795vh] w-[28.0625rem] -top-36 -right-40">
+                            <span class="mt-auto lg:mb-[0.8602vh] lg:text-[1.2903vh] mb-4 text-xs block uppercase font-semibold text-flush-orange">referral program</span>
+                            <span class="lg:text-[2.5806vh] text-xl font-semibold">Earn money with us!</span>
+                            <p class="lg:mt-[1.7204vh] lg:mb-[2.5806vh] lg:text-[1.5053vh] mt-4 mb-6 text-sm text-white text-opacity-50">
+                                Send invitations to your friend<br>
+                                and get real money in your account
+                            </p>
+                            <span class="lg:text-[1.2903vh] text-xs text-white text-opacity-50">Your referral link</span>
+                            <div class="lg:mt-[0.8602vh] lg:p-[0.8602vh] mt-2 p-2 flex justify-between items-center rounded bg-white bg-opacity-[2%]">
+                                <span class="lg:text-[1.5053vh] text-sm text-white text-opacity-50">/invite/123536</span>
+                                <a href="#" class="flex items-center lg:py-[0.6451vh] lg:px-[1.2903vh] rounded bg-white bg-opacity-10 py-1.5 px-3">
+                                    <span class="text-[1.3440vh] text-xs">Copy link</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide relative flex flex-col lg:h-[47.2043vh] lg:py-[1.7204vh] lg:px-[1.2903vh] h-[26.4337rem] py-4 px-3 rounded-xl bg-zeus overflow-hidden">
+                            <img src="/src/assets/images/editor-banner-discount.png" alt="" class="absolute z-0 max-w-none lg:w-[35.6989vh] lg:top-[-4.0860vh] lg:right-[-4.3870vh] w-80 -top-9 -right-10">
+                            <span class="mt-auto lg:mb-[0.8602vh] lg:text-[1.2903vh] mb-4 text-xs block uppercase font-semibold text-flush-orange">your personal discount</span>
+                            <span class="lg:text-[2.5806vh] text-xl font-semibold">Limited 15% discount</span>
+                            <p class="lg:mt-[1.7204vh] lg:mb-[2.5806vh] lg:text-[1.5053vh] mt-4 mb-6 text-sm text-white text-opacity-50">
+                                We are giving a promo code for 15% off any of our<br>
+                                plans! Attention: the promo code is valid until the<br>
+                                end of today.
+                            </p>
+                            <span class="lg:text-[1.2903vh] text-xs text-white text-opacity-50">Your personal promo code</span>
+                            <div class="lg:mt-[0.8602vh] lg:p-[0.8602vh] mt-2 p-2 flex justify-between items-center rounded bg-gradient-to-br from-pizazz via-flush-orange to-scarlet">
+                                <span class="lg:text-[1.5053vh] lg:pl-4 text-sm pl-2">SFP-15-001</span>
+                                <a href="#" class="flex items-center lg:py-[0.6451vh] lg:px-[1.2903vh] rounded bg-white bg-opacity-30 py-1.5 px-3">
+                                    <span class="text-[1.3440vh] text-xs">Copy link</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide relative flex flex-col lg:h-[47.2043vh] lg:py-[1.7204vh] lg:px-[1.2903vh] h-[26.4337rem] py-4 px-3 rounded-xl bg-zeus overflow-hidden">
+                            <img src="/src/assets/images/editor-banner-pro-plan.png" alt="" class="absolute z-0 max-w-none lg:w-[31.7204vh] lg:top-[-2.0376vh] lg:right-[-2.6827vh] w-72 -top-4.5 -right-6">
+                            <span class="mt-auto lg:mb-[0.8602vh] lg:text-[1.2903vh] mb-4 text-xs block uppercase font-semibold text-flush-orange">get pro plan</span>
+                            <span class="lg:text-[2.5806vh] text-xl font-semibold">Full undress with Pro Plan</span>
+                            <p class="lg:mt-[1.7204vh] lg:mb-[2.5806vh] lg:text-[1.5053vh] mt-4 mb-6 text-sm text-white text-opacity-50">
+                                Upgrade your account to a Pro plan and<br>
+                                get access to Undress Mode<br>
+                                and more Pro benefits
+                            </p>
+                            <a href="#" class="block lg:mt-[0.8602vh] lg:p-[0.8602vh] lg:text-[1.5053vh] text-sm mt-2 p-2 text-center font-semibold rounded bg-gradient-to-br from-purple-heart to-electric-violet">
+                                Upgrade to Pro
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide relative flex flex-col lg:h-[47.2043vh] lg:py-[1.7204vh] lg:px-[1.2903vh] h-[26.4337rem] py-4 px-3 rounded-xl bg-zeus overflow-hidden">
+                            <img src="/src/assets/images/editor-banner-socials.png" alt="" class="absolute z-0 max-w-none lg:w-[29.0322vh] lg:top-[-2.6881vh] lg:right-[-1.8279vh] w-64 -top-6 -right-4">
+                            <span class="mt-auto lg:mb-[0.8602vh] lg:text-[1.2903vh] mb-4 text-xs block uppercase font-semibold text-flush-orange">get in touch</span>
+                            <span class="lg:text-[2.5806vh] text-xl font-semibold">Connect to our socials</span>
+                            <p class="lg:mt-[1.7204vh] lg:mb-[2.5806vh] lg:text-[1.5053vh] mt-4 mb-6 text-sm text-white text-opacity-50">
+                                Write to us about any question<br>
+                                or problem. We will try to help you. Feedback is<br>
+                                very important to us<br>
+                                in order to get better!
+                            </p>
+                            <div class="flex lg:gap-x-[0.8602vh] gap-x-2">
+                                <a href="#"
+                                   class="flex-1 flex items-center lg:gap-x-[0.8602vh] lg:p-[0.8602vh] gap-x-2 p-2 rounded bg-white bg-opacity-[2%] border border-white border-opacity-10">
+                                    <span class="lg:p-[0.8602vh] p-2 rounded bg-white bg-opacity-10">
+                                        <img src="/src/assets/images/telegram.svg" alt="" class="lg:h-[1.5053vh] h-3.5">
+                                    </span>
+                                    <span class="flex flex-col text-white text-opacity-50">
+                                        <span class="lg:text-[1.0752vh] leading-[1.6vh] text-[0.625rem]">telegram</span>
+                                        <span class="lg:text-[1.2903vh] text-xs leading-[1.6vh]">@Undress.Love</span>
+                                    </span>
+                                </a>
+                                <a href="#"
+                                   class="flex-1 flex items-center lg:gap-x-[0.8602vh] lg:p-[0.8602vh] gap-x-2 p-2 rounded bg-white bg-opacity-[2%] border border-white border-opacity-10">
+                                    <span class="lg:p-[0.8602vh] p-2 rounded bg-white bg-opacity-10">
+                                        <img src="/src/assets/images/twitter.svg" alt="" class="lg:h-[1.5053vh] h-3.5">
+                                    </span>
+                                    <span class="flex flex-col text-white text-opacity-50">
+                                        <span class="lg:text-[1.0752vh] leading-[1.6vh] text-[0.625rem]">twitter</span>
+                                        <span class="lg:text-[1.2903vh] text-xs leading-[1.6vh]">@Undress.Love</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide relative flex flex-col lg:h-[47.2043vh] lg:py-[1.7204vh] lg:px-[1.2903vh] h-[26.4337rem] py-4 px-3 rounded-xl bg-zeus overflow-hidden">
+                            <img src="/src/assets/images/editor-banner-trial.png" alt="" class="absolute z-0 max-w-none lg:w-[34.5161vh] lg:top-[-3.7634vh] lg:right-[-5.1612vh] w-80 -top-9 -right-12">
+                            <span class="mt-auto lg:mb-[0.8602vh] lg:text-[1.2903vh] mb-4 text-xs block uppercase font-semibold text-flush-orange">free trial</span>
+                            <span class="lg:text-[2.5806vh] text-xl font-semibold">Get a free trial access</span>
+                            <p class="lg:mt-[1.7204vh] lg:mb-[2.5806vh] lg:text-[1.5053vh] mt-4 mb-6 text-sm text-white text-opacity-50">
+                                Get a free trial of the PRO plan<br>
+                                to explore all our features
+                            </p>
+                            <a href="#" class="inline-block w-fit lg:py-[0.8602vh] lg:px-[3.3333vh] lg:text-[1.5053vh] py-2 px-8 text-sm text-center font-semibold rounded bg-gradient-to-br from-pizazz via-flush-orange to-scarlet">
+                                Get a free trial
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex absolute lg:top-[1.7204vh] lg:left-[1.2903vh] top-4 left-3 z-[1]">
+                        <div class="swiper-button-prev cursor-pointer">
+                            <img src="/src/assets/images/arrow-left-1.svg" alt="" class="lg:h-[2.5806vh] h-6">
+                        </div>
+                        <div class="swiper-button-next cursor-pointer">
+                            <img src="/src/assets/images/arrow-right-1.svg" alt="" class="lg:h-[2.5806vh] h-6">
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-auto lg:p-[1.7204vh] lg:text-[1.5053vh] p-4 text-sm rounded-xl bg-zeus">
+                    <div class="flex lg:gap-x-[0.8602vh] lg:mb-[0.8602vh] gap-x-2 mb-2">
+                        <button class="flex-1 lg:py-[0.7666vh] py-[0.4375rem] text-white text-opacity-50 rounded-lg bg-white bg-opacity-[2%] hover:bg-scorpion">Upload new image</button>
+                        <button class="flex-1 lg:py-[0.7666vh] py-[0.4375rem] text-white text-opacity-50 rounded-lg bg-white bg-opacity-[2%] hover:bg-scorpion">Try another mode</button>
+                    </div>
+                    <button class="w-full flex justify-center items-center lg:gap-x-[1.2903vh] lg:py-[0.8602vh] gap-x-3 py-2 rounded-lg bg-gradient-to-br from-pizazz via-flush-orange to-scarlet">
+                        <img src="/src/assets/images/download.svg" alt="" class="lg:h-[1.7204vh] h-4">
+                        <span>Download result image</span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex-1 lg:flex justify-center items-center h-[96.13vh] p-[4.731vh] rounded-xl bg-oil overflow-hidden hidden">
+                <div class="relative">
+                    <img src="/src/assets/images/editor-result.png" alt="" class="min-w-full min-h-full">
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

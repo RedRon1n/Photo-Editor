@@ -1,0 +1,68 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Deepnude - Main Page" %}
+
+{% block page %}
+    <main class="p-6 md:p-10 bg-main bg-cover bg-center bg-no-repeat bg-fixed">
+        <section id="hero"
+                 class="flex flex-col lg:flex-wrap content-between lg:justify-between gap-x-10 lg:h-[calc(100vh-5rem)] flex-nowrap">
+            <div class="lg:w-[calc((100vw-8.75rem)/2)] lg:order-none order-1 lg:h-[calc(100vh-5rem)] md:h-[37rem] h-[calc(100vh-26.05rem)] lg:my-0 md:mt-10 md:mb-16 mt-8 mb-10 relative rounded-[30px] overflow-hidden">
+                <img src="/src/assets/images/hero-image-0.png" alt="" class="object-cover object-top size-full">
+                <img src="/src/assets/images/hero-image-1.png" alt="" id="hero-image-1" class="absolute inset-0 object-cover object-top size-full lg:duration-[100ms] lg:animate-[reveal_10s_ease-in-out_infinite] animate-[reveal_6s_ease-in-out_infinite]">
+                <div  id="reveal-separator" class="absolute inset-y-0 lg:left-[calc(100%-0.1875rem)] left-[calc(100%-0.125rem)] lg:w-1.5 w-1 bg-white bg-opacity-20 lg:duration-[100ms] lg:animate-[reveal-separator_10s_ease-in-out_infinite] animate-[reveal-separator_6s_ease-in-out_infinite]">
+                    <img src="/src/assets/images/reveal-separator.svg" alt="" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 lg:h-12 h-8 max-w-none backdrop-blur rounded-full">
+                </div>
+                <div id="reveal-activator" class="absolute inset-0 cursor-e-resize opacity-0"></div>
+                <a href="#" class="lg:hidden md:flex hidden items-center gap-x-12 rounded-full p-5 absolute md:bottom-6 md:right-6 bottom-4 right-4 overflow-hidden
+                    bg-gradient-to-br from-pizazz via-flush-orange to-scarlet
+                    after:bg-gradient-to-l after:from-mango-tango after:via-clementine after:to-tia-maria after:absolute after:inset-0 after:opacity-0 after:duration-300 after:ease-in-out
+                    before:bg-gradient-to-l before:from-brown before:via-chelsea-gem before:to-totem-pole before:absolute before:inset-0 before:opacity-0 before:duration-300 before:ease-in-out
+                    hover:after:opacity-100 active:after:opacity-0 active:before:opacity-100">
+                    <span class="z-[1]">Get started</span>
+                    <img src="/src/assets/images/arrow-rounded.svg" alt="" class="w-7 z-[1]">
+                </a>
+            </div>
+            <header class="lg:w-[calc((100vw-8.75rem)/2)] flex items-center gap-x-6">
+                <a href="/" class="mr-auto">
+                    <img src="/src/assets/images/logo.svg" alt="" class="h-6">
+                </a>
+                <a href="#" class="hidden opacity-50 md:block">tg @Deepnude.photo</a>
+                <a href="/auth-login" class="rounded-full bg-white bg-opacity-10 px-6 py-2.5 relative border border-red-600 border-opacity-0 duration-300 ease-in-out group active:border-opacity-20">
+                    <span>Log in</span>
+                    <img src="/src/assets/images/diamond-blur.svg" alt="" class="absolute h-2 -bottom-1 left-1/2 -translate-x-1/2 opacity-0 duration-300 ease-in-out group-hover:opacity-100">
+                </a>
+            </header>
+            <div class="lg:w-[calc((100vw-8.75rem)/2)] lg:my-0 md:mt-20 md:mb-8 mt-14 mb-4">
+                <h1 class="block flex-col text-center text-4xl font-semibold uppercase leading-none lg:flex lg:text-8xl md:text-[5.3rem] lg:text-left lg:ml-14 -tracking-3%">
+                    <span class="bg-gradient-to-b bg-clip-text text-transparent lg:ml-5 from-pizazz via-flush-orange to-scarlet">Remove</span>
+                    <span class="bg-gradient-to-b bg-clip-text text-transparent lg:ml-60 from-pizazz via-flush-orange to-scarlet">clothes</span>
+                    <br class="lg:hidden">
+                    <span class="lg:ml-60">from</span>
+                    <span class="lg:ml-32">any girl</span>
+                </h1>
+            </div>
+            <div class="lg:w-[calc((100vw-8.75rem)/2)] lg:flex items-center justify-between">
+                <p class="text-center text-sm opacity-70 lg:text-lg md:text-base lg:text-left -tracking-1% leading-[1.6] md:mb-0 mb-8">
+                    Experience the Revolution of AI-Powered Nude<br>
+                    Photography with Deepnude.photo's Unique Features
+                </p>
+                <a href="#"
+                   class="lg:flex md:hidden flex items-center lg:justify-stretch justify-between gap-x-12 rounded-full lg:p-8 p-5 relative overflow-hidden
+                   bg-gradient-to-br from-pizazz via-flush-orange to-scarlet
+                   after:bg-gradient-to-l after:from-mango-tango after:via-clementine after:to-tia-maria after:absolute after:inset-0 after:opacity-0 after:duration-300 after:ease-in-out
+                   before:bg-gradient-to-l before:from-brown before:via-chelsea-gem before:to-totem-pole before:absolute before:inset-0 before:opacity-0 before:duration-300 before:ease-in-out
+                   hover:after:opacity-100 active:after:opacity-0 active:before:opacity-100">
+                    <span class="z-[1]">Get started</span>
+                    <img src="/src/assets/images/arrow-rounded.svg" alt="" class="w-7 z-[1]">
+                </a>
+            </div>
+            <footer class="lg:w-[calc((100vw-8.75rem)/2)] lg:order-none order-2 flex md:gap-x-8 gap-y-6 gap-x-2 md:flex-nowrap flex-wrap md:justify-start justify-between md:text-base text-xs">
+                <a href="#" class="text-white text-opacity-50 duration-100 hover:text-opacity-70">Privacy policy</a>
+                <a href="#" class="text-white text-opacity-50 duration-100 hover:text-opacity-70">Terms of service</a>
+                <a href="#" class="text-white text-opacity-50 duration-100 hover:text-opacity-70">Support @Nudity.vip</a>
+                <a href="#" class="text-white text-opacity-50 duration-100 hover:text-opacity-70 block lg:block md:hidden">tg @Deepnude.photo</a>
+                <span class="text-white text-opacity-50 md:ml-auto">2024</span>
+            </footer>
+        </section>
+    </main>
+{% endblock %}

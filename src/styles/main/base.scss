@@ -1,0 +1,24 @@
+html {
+  overflow-x: hidden;
+  font-size: 4.102vw;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#hero-image-1{
+  clip-path: inset(0px 0px 0px 100%);
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1.918vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 0.85vw;
+  }
+}

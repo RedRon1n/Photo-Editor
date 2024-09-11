@@ -1,0 +1,26 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Deepnude - Auth Input Error" %}
+
+{% block page %}
+    <main class="bg-auth bg-cover bg-center bg-no-repeat bg-fixed">
+        <section class="flex items-center min-h-screen md:p-0 pt-20 pb-6 px-6 justify-center md:inset-10 backdrop-blur-3xl">
+            <a href="/" class="absolute top-6 left-6">
+                <img src="/src/assets/images/logo.svg" alt="" class="h-6">
+            </a>
+            <a href="#" class="absolute top-6 right-6">
+                <img src="/src/assets/images/xmark.svg" alt="" class="h-3">
+            </a>
+            <div class="bg-white bg-opacity-10 md:w-[36.5rem] w-full md:px-20 px-6 py-8 text-center md:rounded-[2rem] rounded-2xl">
+                <form action="#">
+                    {# ERROR #}
+                    {# ADD border-red-orange border-opacity-100 #}
+                    {# REMOVE border-geyser border-opacity-10 focus:border-flush-orange focus:border-opacity-100 #}
+                    <input type="email" placeholder="Insert your email" value="Whoofrom@deepnude.photo" class="w-full h-11 px-4 mb-6 text-sm placeholder-opacity-50 !outline-0 bg-white bg-opacity-5 rounded border border-red-orange border-opacity-100">
+                    <span class="text-red-orange text-sm mb-6 -mt-4 block text-left"> Email doesn't match </span>
+                    {# ERROR #}
+                </form>
+            </div>
+        </section>
+    </main>
+{% endblock %}

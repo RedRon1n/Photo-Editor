@@ -1,0 +1,43 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Deepnude - Verify/Error" %}
+
+{% block page %}
+    <main class="bg-auth bg-cover bg-center bg-no-repeat bg-fixed">
+        <section class="flex items-center min-h-screen md:p-0 pt-20 pb-6 px-6 justify-center md:inset-10 backdrop-blur-3xl">
+            <a href="/" class="absolute top-6 left-6">
+                <img src="/src/assets/images/logo.svg" alt="" class="h-6">
+            </a>
+            <a href="#" class="absolute top-6 right-6">
+                <img src="/src/assets/images/xmark.svg" alt="" class="h-3">
+            </a>
+            <div class="bg-white bg-opacity-10 md:w-[36.5rem] w-full md:px-20 px-6 py-8 text-center md:rounded-[2rem] rounded-2xl">
+                <div class="font-semibold text-3xl">Verify your code</div>
+                <div class="md:text-sm text-xs leading-[1.6] opacity-50 mt-3">Enter the passcode you just received on your email address ending <br class="md:block hidden"> with ********in@gmail.com</div>
+                <form action="#">
+                    <div class="flex md:gap-x-4 gap-x-2.5 justify-center my-12">
+                        {#ERROR#}
+                        {# ADD border-red-orange shadow-red-orange/30 #}
+                        {# REMOVE border-flush-orange shadow-flush-orange/30 #}
+                        <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" placeholder=" " value="9" class="md:w-14 w-10 md:h-[4.25rem] h-11 md:text-4xl text-3xl text-center font-semibold !outline-0 bg-white bg-opacity-5 rounded-sm border placeholder-shown:border-geyser placeholder-shown:border-opacity-10 border-red-orange border-opacity-100 placeholder-shown:shadow-none shadow-lg shadow-red-orange/30 focus:border-flush-orange focus:border-opacity-100 peer/1">
+                        <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" placeholder=" " value="9" class="md:w-14 w-10 md:h-[4.25rem] h-11 md:text-4xl text-3xl text-center font-semibold !outline-0 bg-white bg-opacity-5 rounded-sm border placeholder-shown:border-geyser placeholder-shown:border-opacity-10 border-red-orange border-opacity-100 placeholder-shown:shadow-none shadow-lg shadow-red-orange/30 focus:border-flush-orange focus:border-opacity-100 peer-placeholder-shown/1:pointer-events-none peer/2">
+                        <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" placeholder=" " value="9" class="md:w-14 w-10 md:h-[4.25rem] h-11 md:text-4xl text-3xl text-center font-semibold !outline-0 bg-white bg-opacity-5 rounded-sm border placeholder-shown:border-geyser placeholder-shown:border-opacity-10 border-red-orange border-opacity-100 placeholder-shown:shadow-none shadow-lg shadow-red-orange/30 focus:border-flush-orange focus:border-opacity-100 peer-placeholder-shown/2:pointer-events-none peer/3">
+                        <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" placeholder=" " value="9" class="md:w-14 w-10 md:h-[4.25rem] h-11 md:text-4xl text-3xl text-center font-semibold !outline-0 bg-white bg-opacity-5 rounded-sm border placeholder-shown:border-geyser placeholder-shown:border-opacity-10 border-red-orange border-opacity-100 placeholder-shown:shadow-none shadow-lg shadow-red-orange/30 focus:border-flush-orange focus:border-opacity-100 peer-placeholder-shown/3:pointer-events-none peer/4">
+                        <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" placeholder=" " value="9" class="md:w-14 w-10 md:h-[4.25rem] h-11 md:text-4xl text-3xl text-center font-semibold !outline-0 bg-white bg-opacity-5 rounded-sm border placeholder-shown:border-geyser placeholder-shown:border-opacity-10 border-red-orange border-opacity-100 placeholder-shown:shadow-none shadow-lg shadow-red-orange/30 focus:border-flush-orange focus:border-opacity-100 peer-placeholder-shown/4:pointer-events-none peer/5">
+                        <input type="text" maxlength="1" oninput="this.value=this.value.replace(/[^0-9]/g,'');" placeholder=" " value="9" class="md:w-14 w-10 md:h-[4.25rem] h-11 md:text-4xl text-3xl text-center font-semibold !outline-0 bg-white bg-opacity-5 rounded-sm border placeholder-shown:border-geyser placeholder-shown:border-opacity-10 border-red-orange border-opacity-100 placeholder-shown:shadow-none shadow-lg shadow-red-orange/30 focus:border-flush-orange focus:border-opacity-100 peer-placeholder-shown/5:pointer-events-none">
+                    </div>
+
+                    <div class="text-red-orange -mt-6 mb-12">You’ve entered the wrong code, please try again.</div>
+                    {#ERROR#}
+
+                    <div class="text-sm opacity-50 mb-12">You can request the code again in 25 seconds</div>
+                    <hr class=" border-white border-opacity-20 mb-3">
+                    <a href="/auth-login" class="inline-flex justify-center items-center gap-x-4 p-1">
+                        <img src="/src/assets/images/arrow-left.svg" alt="" class="h-4">
+                        <div class="text-sm">Back to login</div>
+                    </a>
+                </form>
+            </div>
+        </section>
+    </main>
+{% endblock %}

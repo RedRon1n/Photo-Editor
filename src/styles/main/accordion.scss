@@ -1,0 +1,10 @@
+.accordion-content {
+  overflow: hidden;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: opacity, height;
+  will-change: opacity, contents;
+}
+.accordion-content:not(.is-active) {
+  height: 0;
+  opacity: 0;
+}
